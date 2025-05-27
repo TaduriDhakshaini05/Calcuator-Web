@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!it insure that the document type is html5 and helps the browser to do it in the html5 onlyy>
+    <html lang="en">
+    <!it arranges the html language as the english>
+
+        <head>
+            <!give the heading and titles of the any starting statements>
+                <title>Home</title>
+                <!this is the title of the page which is at the top of the browser>
+                    <meta charset="UTF-8" />
+                    <!Specifies the character encoding as UTF-8, which supports most text characters.i.e: it will encode
+                        the characters(letters,symbols,any) as the 8bit code to the system>
+                        <meta name="viewport"  content="width=device-width"  initial_scale=1.0/>
+                                <link rel="stylesheet" href="styles.css" />
+                                <! link the html document with the externa css document>
+        </head>
+
+        <body>
+            <div class="container" tabindex="0">
+                <! this holds the entire program layout>
+                    <fieldset id="container">
+                        <!defines a block of elements in the container named "container" which is defined with the id>
+                            <form name="calculator">
+                                <!Holds the input field and all buttons for operations.>
+
+                                    <input id="display" type="text" name="display" readonly
+                                        onclick="this.removeAttribute('readonly')" />
+                                    <!this will display the input which we have clicked on the calculator>
+                                        <br>
+
+                                        <input class="button digits" type="button" value="7"
+                                            onclick="calculator.display.value += '7'">
+                                        <input class="button digits" type="button" value="8"
+                                            onclick="calculator.display.value += '8'">
+                                        <input class="button digits" type="button" value="9"
+                                            onclick="calculator.display.value += '9'">
+                                        <input class="button mathButtons" type="button" value="+"
+                                            onclick="calculator.display.value += ' + '">
+                                        <br>
+                                        <input class="button digits" type="button" value="4"
+                                            onclick="calculator.display.value += '4'">
+                                        <input class="button digits" type="button" value="5"
+                                            onclick="calculator.display.value += '5'">
+                                        <input class="button digits" type="button" value="6"
+                                            onclick="calculator.display.value += '6'">
+                                        <input class="button mathButtons" type="button" value="-"
+                                            onclick="calculator.display.value += ' - '">
+                                        <br>
+                                        <input class="button digits" type="button" value="1"
+                                            onclick="calculator.display.value += '1'">
+                                        <input class="button digits" type="button" value="2"
+                                            onclick="calculator.display.value += '2'">
+                                        <input class="button digits" type="button" value="3"
+                                            onclick="calculator.display.value += '3'">
+                                        <input class="button mathButtons" type="button" value="x"
+                                            onclick="calculator.display.value += ' * '">
+                                        <br>
+                                        <input id="clearButton" class="button" type="button" value="C"
+                                            onclick="calculator.display.value = ''">
+                                        <input class="button digits" type="button" value="0"
+                                            onclick="calculator.display.value += '0'">
+                                        <input class="button digits" type="button" value="."
+                                            onclick="calculator.display.value += '.'">
+                                        <input class="button" type="button" value="⌫"
+                                            onclick="calculator.display.value = calculator.display.value.slice(0, -1)">
+                                        <br>
+                                        <input class="button mathButtons" type="button" value="="
+                                            onclick="calculator.display.value = eval(calculator.display.value)">
+                                        <input class="button mathButtons" type="button" value="/"
+                                            onclick="calculator.display.value += ' / '">
+                                        <input class="button mathButtons" type="button" value="√"
+                                            onclick="calculator.display.value = Math.sqrt(calculator.display.value)">
+                                        <input class="button mathButtons" type="button" value="^"
+                                            onclick="calculator.display.value += '**'">
+                            </form>
+                    </fieldset>
+            </div>
+        </body>
+
+    </html>
